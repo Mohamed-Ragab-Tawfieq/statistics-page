@@ -1,0 +1,505 @@
+// Variables
+
+$white: #fff !default;
+$white-light: #f1f5f7;
+$info: #63a1ff;
+$red: #ff4947;
+$blue: #2a75f4;
+$link: #2a33a7;
+$blue-dark: #1c4670;
+$linear-primary-45: linear-gradient(45deg, #001c51, #13539f 35%, #217bd8 100%);
+$blue-op: rgba(
+    $color: $blue,
+    $alpha: 0.3,
+);
+$gray: #bebebe;
+$gray-light: rgba(112, 112, 112, 0.16);
+$gray-lighter: rgb(222, 226, 230);
+$black: #343638;
+$black-light-opacity: rgba(0, 0, 0, 0.33);
+$black-bold-opacity: rgba(0, 0, 0, 0.9);
+
+.orange-color {
+    color: $blue !important;
+}
+
+.black-color {
+    color: black !important;
+}
+
+.blue-color {
+    color: $blue !important;
+}
+
+.blue-dark {
+    color: $blue-dark !important;
+}
+
+.blue-dark-bg {
+    background-color: #145399;
+}
+
+.btn-primary-grd {
+    background: $linear-primary-45;
+}
+
+.gray-color {
+    color: $gray !important;
+}
+
+.orange-bg {
+    background: $blue !important;
+}
+
+.black-bg {
+    background: black !important;
+}
+
+.red-bg {
+    background: $blue !important;
+}
+
+.gray-bg {
+    background: $gray !important;
+}
+
+.bg-danger-op {
+    background-color: rgba($color: $red, $alpha: 0.13);
+}
+
+// BS Override
+
+.text-warning {
+    color: $blue !important;
+}
+
+.text-primary {
+    color: $blue !important;
+}
+
+.text-secondary {
+    color: $gray-light !important;
+}
+
+.text-info {
+    color: $info !important;
+}
+
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.custom-check {
+    .custom-control-input:checked {
+        ~ .custom-control-label {
+            &::after {
+                background: $blue;
+            }
+        }
+    }
+}
+
+.table-hover {
+    tbody {
+        tr {
+            &:hover {
+                background-color: $blue-op;
+            }
+        }
+    }
+}
+
+.rounded {
+    border-radius: 0.5rem !important;
+}
+
+// Buttons
+
+.btn-primary {
+    background: $blue;
+    border-color: $blue;
+
+    &:hover {
+        background: $blue;
+        color: white;
+        border-color: $blue;
+    }
+}
+
+.btn-blue {
+    background-color: $blue;
+    border-color: $blue;
+
+    &:hover {
+        background: $blue;
+        border-color: $blue;
+    }
+}
+
+.btn-gray {
+    background-color: $gray;
+    border-color: $gray;
+
+    &:hover {
+        background: $blue;
+        border-color: $blue;
+    }
+}
+
+.btn-black {
+    background-color: $black;
+    border-color: $black;
+
+    &:hover {
+        background: $blue;
+        border-color: $blue;
+    }
+}
+
+.btn-outline {
+    border-color: $blue;
+    color: $black;
+
+    &:hover {
+        background: $blue;
+        border-color: $blue;
+    }
+}
+
+// Forms
+
+.form__group {
+    .calendar-icon {
+        color: $blue;
+    }
+}
+
+// Dropdown
+
+.custom-dropdown {
+    box-shadow: 0 0 10px $gray-light;
+
+    a,
+    button {
+        border-color: $gray-light;
+
+        &:hover {
+            &:not(.dots) {
+                background: $blue;
+            }
+        }
+    }
+}
+
+// Login Page
+
+.login-page {
+    flex-direction: column;
+    background-image: url("./../images/theme/login-bg.png");
+    
+    @media (max-width: 767px) {
+        background-image: url("./../images/theme/bg.svg");
+    }
+
+    .form-wrapper {
+        background-color: $blue;
+        border-radius: 1rem;
+
+        .form-content {
+            border-radius: 1rem;
+        }
+    }
+
+    .login-container {
+        .login-header {
+            h5 {
+                color: $blue;
+
+                &::before {
+                    background: $blue;
+                }
+            }
+
+            .reset {
+                &:hover {
+                    color: $blue;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .login-intro {
+            h4 {
+                color: $blue;
+            }
+        }
+    }
+}
+
+// Header
+
+.main-navbar {
+    background: url("./../images/theme/header-bg.png") no-repeat;
+    background-size: cover;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.heart-icon {
+    &:hover {
+        color: $blue;
+    }
+
+    span {
+        background: $blue;
+    }
+}
+
+.top-search {
+    .header-select {
+        .select-group {
+            .select-arrow {
+                color: $blue;
+
+                @media (max-width: 991px) {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .calendar-search {
+        .calendar-icon {
+            color: $blue;
+
+            @media (max-width: 991px) {
+                color: #fff;
+            }
+        }
+    }
+
+    .modal & {
+        .search-input {
+            border-color: $gray;
+        }
+
+        .header-select {
+            .custom-select {
+                color: $blue;
+            }
+
+            .select-group {
+                .select-arrow {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+
+// Sidebar
+
+.sidebar {
+    .sidebar-welcome {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+            @media (max-width: 767px) {
+                color: $black !important;
+            }
+        }
+
+        .logo-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90px;
+            height: 90px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 50%;
+
+            img {
+                max-width: 60px;
+                max-height: 60px;
+            }
+
+            & + .logo-img {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .sidebar-body {
+        a {
+            &:hover {
+                background: $blue;
+            }
+        }
+
+        .active {
+            background: $blue;
+        }
+    }
+}
+
+// Content
+
+.top-header-page {
+    .btn-blue {
+        background: $blue-op;
+        border-color: $blue-op;
+
+        &:hover,
+        &.active {
+            background: $blue;
+            border-color: $blue;
+        }
+    }
+}
+
+.order-body {
+    box-shadow: 0 0 10px $gray-light;
+
+    .order-header {
+        border-color: $gray-light;
+
+        h3 {
+            color: $black;
+        }
+
+        .badge {
+            background: $blue;
+        }
+    }
+}
+
+.user-details {
+    .user-body {
+        input,
+        textarea {
+            &[disabled] {
+                color: $blue;
+            }
+        }
+
+        .color-orange {
+            input {
+                color: $blue;
+            }
+        }
+    }
+
+    &.roles-container {
+        .user-header {
+            background: $blue;
+        }
+    }
+
+    &.reply-table {
+        .user-header {
+            background: $blue;
+        }
+    }
+
+    .interests {
+        p {
+            color: $black;
+        }
+    }
+}
+
+.view-toggle {
+    &,
+    a {
+        color: $gray;
+    }
+
+    .active {
+        color: $blue;
+    }
+}
+
+.pagination {
+    .page-item {
+        .page-link {
+            color: $black;
+
+            &:hover {
+                background: $blue;
+            }
+        }
+
+        &.active {
+            .page-link {
+                background: $blue;
+            }
+        }
+
+        &.disabled {
+            .page-link {
+                color: $black;
+            }
+        }
+    }
+}
+
+.list-title {
+    background: rgba($color: $blue, $alpha: 0.7);
+}
+
+// custom tabs
+.custom-tabs {
+    // padding-inline-start: 1.5rem;
+    border-bottom: 0;
+    margin-bottom: 15px;
+    flex-wrap: nowrap;
+
+    @media (max-width: 767px) {
+        padding-inline-start: 0.5rem;
+        padding-inline-end: 0.5rem;
+        flex-flow: column;
+    }
+
+    .nav-item {
+        .nav-link {
+            color: $blue-op;
+            text-align: center;
+
+            &.active {
+                border: none;
+                color: $blue;
+                background-color: inherit;
+                border-bottom: 2px solid $blue;
+            }
+
+            &.nav-link-secondary {
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &.justify-content-change-content {
+        .nav-item {
+            .nav-link {
+                border-color: $gray;
+                color: rgba($color: #343638, $alpha: 0.7);
+
+                // &.active,
+                // &:hover {
+                //     border-color: $blue;
+                //     background: $blue;
+                // }
+            }
+        }
+    }
+}
+
+// Footer
+footer {
+    background: linear-gradient(225deg, #2380df, #001b50);
+}

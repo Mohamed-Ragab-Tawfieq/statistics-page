@@ -1,0 +1,40 @@
+$white: #fff !default;
+$white-light: #f1f5f7;
+$info: #e7f2ff;
+$green: #6eb43f !default;
+$yellow: #dca11d !default;
+$blue: #2a75f4 !default;
+$link: #2a33a7;
+$blue-dark: #1c4670;
+$linear-primary-45: linear-gradient(45deg, #001c51, #13539f 35%, #217bd8 100%);
+
+$blue-op: rgba(
+    $color: $blue,
+    $alpha: 0.3,
+);
+$red: #ff4947;
+$gray: #bebebe;
+$gray-light: rgba(112, 112, 112, 0.16);
+$gray-lighter: rgb(222, 226, 230);
+$black: #343638;
+$black-light-opacity: rgba(0, 0, 0, 0.13);
+$black-bold-opacity: rgba(0, 0, 0, 0.9);
+
+// Fonts
+$font-cairo: "cairo", sans-serif;
+$font-changa: "Changa", sans-serif;
+
+$font-thin: 200;
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+$font-black: 900;
+
+// Shadows
+$box-shadow: 0 0.2rem 0.45rem rgba(#000, 0.16) !default;
+
+// radius
+$border-radius-lg: 1.25rem;
+

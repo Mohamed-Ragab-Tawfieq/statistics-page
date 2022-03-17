@@ -1,0 +1,37 @@
+// media queries
+
+@mixin min-max-media($min-width, $max-width) {
+  @media (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin min-width-media($min-width) {
+  @media (min-width: $min-width) {
+    @content;
+  }
+}
+
+@mixin max-width-media($max-width) {
+  @media (max-width: $max-width) {
+    @content;
+  }
+}
+
+// transition
+
+@mixin transition($time: 0.2s, $how: ease-in-out) {
+  transition: $time $how;
+  -webkit-transition: $time $how;
+  -moz-transition: $time $how;
+  -ms-transition: $time $how;
+  -o-transition: $time $how;
+}
+
+@mixin borderRadius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}

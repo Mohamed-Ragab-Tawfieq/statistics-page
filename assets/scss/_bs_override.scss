@@ -1,0 +1,54 @@
+// .text-success {
+//     color: $blue !important;
+// }
+// .text-danger {
+//     color: $blue !important;
+// }
+.text-warning {
+    color: $blue !important;
+}
+
+.text-primary {
+    color: $blue !important;
+}
+
+.text-secondary {
+    color: $gray-light !important;
+}
+
+.text-info {
+    color: $info !important;
+}
+
+// .small,
+// small {
+//     font-size: 60%;
+// }
+
+.table {
+
+    td,
+    th {
+        padding: 0.5rem;
+    }
+}
+
+.table-borderless {
+
+    th,
+    td,
+    thead th,
+    tbody+tbody {
+        border: 0;
+    }
+}
+
+.table-hover {
+    tbody {
+        tr {
+            &:hover {
+                background-color: $blue-op;
+            }
+        }
+    }
+}

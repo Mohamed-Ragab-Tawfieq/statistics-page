@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- IE Compatiblity Meta-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--First Mobile Meta-->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>المعهد القومي للتغذية</title>
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Cairo:300,400,600,700,900&display=swap&subset=arabic" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+
+    <!-- CSS Custom -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+
+    <!--[If It IE 9]>
+      <script src="assets/js/html5shiv.min.js"></script>  
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Start Loading -->
+    <div class="loader">
+
+    </div>
+    <!-- End Loading -->
+
+    <!-- Start Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <section class="stats">
+                    <!-- Start Data table -->
+                    <div class="row">
+
+                        <!-- product -->
+                        <div class="col-lg-4 px-md-0 px-lg-1 mt-5 mt-md-0">
+                            <div class="card rounded-lg shadow">
+
+                                <div class="card-header bg-white">
+                                    <div class="row">
+
+                                        <div class="col-5 px-0">
+                                            <canvas id="proStats"></canvas>
+                                            <img src="assets/images/service-icons/product-dark.png" class="pro-stats-img img-fluid" alt="">
+                                        </div>
+
+                                        <div class="col-7 px-0 mt-3">
+                                            <div class="d-flex align-items-center ">
+                                                <h3 id="approvedProCount"> 125 </h3>
+                                                <h6 class="ml-2"> منتج تم تصريحهم </h6>
+                                            </div>
+                                            <h6>بهذا الشهر</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body text-center py-2">
+                                    <img src="assets/images/icons/up.svg" class="stats-curve" alt="">
+                                    <span id="proPastDiffer"> 12.27 % </span>
+                                    <span> عن الشهر السابق </span>
+                                </div>
+
+                                <div class="card-footer text-center" id="proLegend">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- company -->
+                        <div class="col-lg-4 px-md-0 px-lg-1 my-3 my-lg-0">
+                            <div class="card rounded-lg shadow">
+
+                                <div class="card-header bg-white">
+                                    <div class="row">
+
+                                        <div class="col-5 px-0">
+                                            <canvas id="comStats"></canvas>
+                                            <img src="assets/images/service-icons/company-dark.svg" class="pro-stats-img img-fluid" alt="">
+                                        </div>
+
+                                        <div class="col-7 px-0 mt-3">
+                                            <div class="d-flex align-items-center ">
+                                                <h3 id="approvedComCount"> 125 </h3>
+                                                <h6 class="ml-2"> شركة تم تصريحها </h6>
+                                            </div>
+                                            <h6>بهذا الشهر</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body text-center py-2">
+                                    <img src="assets/images/icons/down.svg" class="stats-curve" alt="">
+                                    <span id="comPastDiffer"> 12.27 % </span>
+                                    <span> عن الشهر السابق </span>
+                                </div>
+
+                                <div class="card-footer text-center" id="comLegend">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- factory -->
+                        <div class="col-lg-4 px-md-0 px-lg-1">
+                            <div class="card rounded-lg shadow">
+
+                                <div class="card-header bg-white">
+                                    <div class="row">
+
+                                        <div class="col-5 px-0">
+                                            <canvas id="factStats"></canvas>
+                                            <img src="assets/images/service-icons/factory-dark.svg" class="pro-stats-img img-fluid" alt="">
+                                        </div>
+
+                                        <div class="col-7 px-0 mt-3">
+                                            <div class="d-flex align-items-center ">
+                                                <h3 id="approvedFactCount"> 125 </h3>
+                                                <h6 class="ml-2"> مصنع تم تصريحه </h6>
+                                            </div>
+                                            <h6>بهذا الشهر</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body text-center py-2">
+                                    <img src="assets/images/icons/up.svg" class="stats-curve" alt="">
+                                    <span id="factPastDiffer"> 12.27 % </span>
+                                    <span> عن الشهر السابق </span>
+                                </div>
+
+                                <div class="card-footer text-center" id="factLegend">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row my-3">
+                        <div class="col-lg-8">
+                            <div class="row d-flex">
+
+                                <!-- users -->
+                                <div class="col-md-6 col-lg-4 pl-md-0 px-lg-1 order-lg-2 mt-md-0">
+                                    <div class="card rounded-lg shadow">
+
+                                        <div class="card-header bg-white">
+                                            مستخدمي النظام
+                                        </div>
+
+                                        <div class="card-body pt-md-5 pb-md-5 pt-lg-3 pb-lg-5">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <canvas id="usersStats"></canvas>
+                                                </div>
+                                                <div class="col-6 px-0">
+                                                    <div class="users-legend pt-3 pt-lg-2" id="usersLegend"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- orders -->
+                                <div class="col-md-6 col-lg-8 px-md-0 px-lg-1 order-lg-1 mt-3 mt-md-0">
+                                    <div class="card rounded-lg shadow">
+
+                                        <div class="card-header bg-white d-flex">
+                                            ملخص الطلبات الجديدة
+                                        </div>
+
+                                        <div class="card-body row pt-lg-5" dir="ltr">
+                                            <div class="col-lg-6">
+                                                <div class="d-flex">
+                                                    <small class="percentage mt-n1 ml-2 text-info">20%</small>
+                                                    <label class="ml-3 mt-n2">مصنع</label>
+                                                    <progress class="w-100" id="ordersFactStats" max="100" value="70"></progress>
+                                                </div>
+
+                                                <div class="d-flex mt-4">
+                                                    <small class="percentage mt-n1 ml-2 text-info">20%</small>
+                                                    <label class="ml-3 mt-n2">شركة</label>
+                                                    <progress class="w-100" id="ordersComStats" max="100" value="30"></progress>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="d-flex mt-4 mt-lg-0">
+                                                    <small class="percentage mt-n1 ml-2 text-info">20%</small>
+                                                    <label class="ml-3 mt-n2">عينة</label>
+                                                    <progress class="w-100" id="ordersSampleStats" max="150" value="70"></progress>
+                                                </div>
+
+                                                <div class="d-flex mt-4">
+                                                    <small class="percentage mt-n1 ml-2 text-info">20%</small>
+                                                    <label class="ml-3 mt-n2">منتج</label>
+                                                    <progress class="w-100" id="ordersProStats" max="200" value="150"></progress>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- approvals -->
+                                <div class="col-12 px-md-0 px-lg-1 mt-3 order-lg-3">
+                                    <ul class="nav nav-tabs custom-tabs justify-content-change-content flex-row ml-3 mb-0">
+                                        <li class="nav-item">
+                                            <a class="nav-link active rounded-left" href="#comApprovalsPanel" data-toggle="tab">شركات </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#factApprovalsPanel" data-toggle="tab">مصانع</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link rounded-right" href="#proApprovalsPanel" data-toggle="tab">منتجات</a>
+                                        </li>
+                                    </ul>
+
+                                    <div class="tabs-content">
+                                        <!-- company approvals -->
+                                        <div class="tab-pane fade show active" id="comApprovalsPanel" role="tabpanel">
+                                            <div class="card rounded-lg shadow">
+
+                                                <div class="card-header position-relative d-flex flex-column flex-lg-row align-items-center justify-content-end bg-white px-2">
+                                                    <span class="mr-auto ml-lg-n1">التصريحات</span>
+
+                                                    <div class="table-dropdown mx-2 mt-2 mt-lg-0">
+                                                        <div class="btn-group top-arrow my-2 my-lg-0 w-125p">
+                                                            <button class="btn w-100 rounded bg-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                                                <span class="d-flex justify-content-between">
+                                                                    <span class="text-dark">شركة المستقبل</span>
+                                                                    <span class="text-primary"><i class="fas fa-sort-down fa-lg"></i></span>
+                                                                </span>
+                                                            </button>
+                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                <button class="dropdown-item">شركة المستقبل</button>
+                                                                <button class="dropdown-item">شركة المستقبل</button>
+                                                                <button class="dropdown-item">شركة المستقبل</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="table-dropdown">
+                                                        <div class="btn-group top-arrow">
+                                                            <button class="btn w-25 rounded bg-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                                                <span class="d-flex justify-content-between">
+                                                                    <span class="text-dark">2022</span>
+                                                                    <span class="text-primary"><i class="fas fa-sort-down fa-lg"></i></span>
+                                                                </span>
+                                                            </button>
+                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                <button class="dropdown-item text-primary">2022</button>
+                                                                <button class="dropdown-item text-primary">2021</button>
+                                                                <button class="dropdown-item text-primary">2020</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="approvals-legend mr-n4 ml-2 w-100p my-2 my-lg-0" id="comApprovalsLegend"></div>
+                                                </div>
+
+                                                <div class="card-body pb-0">
+                                                    <canvas class="approvals-stats" id="comApprovalsStats"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- factory approvals -->
+                                        <div class="tab-pane fade" id="factApprovalsPanel" role="tabpanel">
+                                            <div class="card rounded-lg shadow">
+
+                                                <div class="card-header position-relative d-flex flex-column flex-lg-row align-items-center justify-content-end bg-white px-2">
+                                                    <span class="mr-auto">التصريحات</span>
+
+                                                    <div class="table-dropdown mx-2 mt-2 mt-lg-0">
+                                                        <div class="btn-group top-arrow my-2 my-lg-0 w-125p">
+                                                            <button class="btn w-100 rounded bg-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                                                <span class="d-flex justify-content-between">
+                                                                    <span class="text-dark">مصنع النصر</span>
+                                                                    <span class="text-primary"><i class="fas fa-sort-down fa-lg"></i></span>
+                                                                </span>
+                                                            </button>
+                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                <button class="dropdown-item">مصنع1</button>
+                                                                <button class="dropdown-item">مصنع1</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="table-dropdown">
+                                                        <div class="btn-group top-arrow">
+                                                            <button class="btn w-25 rounded bg-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                                                <span class="d-flex justify-content-between">
+                                                                    <span class="text-dark">2022</span>
+                                                                    <span class="text-primary"><i class="fas fa-sort-down fa-lg"></i></span>
+                                                                </span>
+                                                            </button>
+                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                <button class="dropdown-item text-primary">2022</button>
+                                                                <button class="dropdown-item text-primary">2021</button>
+                                                                <button class="dropdown-item text-primary">2020</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="approvals-legend mr-n4 ml-2 w-100p my-2 my-lg-0" id="factApprovalsLegend"></div>
+                                                </div>
+
+                                                <div class="card-body pb-0">
+                                                    <canvas class="approvals-stats" id="factApprovalsStats"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- product approvals -->
+                                        <div class="tab-pane fade" id="proApprovalsPanel" role="tabpanel">
+                                            <div class="card rounded-lg shadow">
+
+                                                <div class="card-header position-relative d-flex flex-column flex-lg-row align-items-center justify-content-end bg-white px-2">
+                                                    <span class="mr-auto">التصريحات</span>
+
+                                                    <div class="table-dropdown mx-2 mt-2 mt-lg-0">
+                                                        <div class="btn-group top-arrow my-2 my-lg-0 w-125p">
+                                                            <button class="btn w-100 rounded bg-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                                                <span class="d-flex justify-content-between">
+                                                                    <span class="text-dark">البان الأطفال</span>
+                                                                    <span class="text-primary"><i class="fas fa-sort-down"></i></span>
+                                                                </span>
+                                                            </button>
+                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                <button class="dropdown-item text-primary">جديد</button>
+                                                                <button class="dropdown-item text-primary">بدء العمل</button>
+                                                                <button class="dropdown-item text-success">قبول</button>
+                                                                <button class="dropdown-item text-danger">رفض</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="table-dropdown">
+                                                        <div class="btn-group top-arrow">
+                                                            <button class="btn w-25 rounded bg-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                                                <span class="d-flex justify-content-between">
+                                                                    <span class="text-dark">2022</span>
+                                                                    <span class="text-primary"><i class="fas fa-sort-down"></i></span>
+                                                                </span>
+                                                            </button>
+                                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                <button class="dropdown-item text-primary">2022</button>
+                                                                <button class="dropdown-item text-primary">2021</button>
+                                                                <button class="dropdown-item text-primary">2020</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="approvals-legend mr-n4 ml-2 w-100p my-2 my-lg-0" id="proApprovalsLegend"></div>
+                                                </div>
+
+                                                <div class="card-body pb-0">
+                                                    <canvas class="approvals-stats" id="proApprovalsStats"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- total -->
+                        <div class="col-lg-4 px-md-0 px-lg-1 d-lg-flex mt-3 mt-lg-0">
+                            <div class="card rounded-lg shadow">
+
+                                <div class="card-header bg-white">
+                                    طلبات تصريح المنتجات بعام 2022
+                                </div>
+
+                                <div class="card-body text-center">
+                                    <canvas class="position-relative mt-lg-5" id="totalStats"></canvas>
+                                    <span class="total-value mb-lg-4 pb-lg-3">2500 <br> طلب</span>
+                                </div>
+
+                                <div class="card-footer total-legend text-lg-center small px-lg-0 py-3" id="totalLegend">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- End Data table -->
+
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- End Content -->
+
+    <!-- JS Libraries -->
+    <script src="assets/js/jquery.js"></script>
+
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/Chart.min.js"></script>
+    <script src="assets/js/chartjs-plugin-datalabels2.0.0.js"></script>
+
+    <!-- JS Custom -->
+    <script src="assets/js/function.js"></script>
+    <script src="assets/js/stats.js"></script>
+
+</body>
+
+</html>
